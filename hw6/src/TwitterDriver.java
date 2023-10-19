@@ -7,7 +7,10 @@ public class TwitterDriver {
         TwitterFeed tf;
         Scanner scanner = new Scanner(new File("feed1.txt"));
 
+        //add screen name
         tf = new TwitterFeed(scanner.nextLine());
+
+        // read in tweets
         while (scanner.hasNext()){
             tf.addTweet(scanner.nextLine(),scanner.nextLine());
         }

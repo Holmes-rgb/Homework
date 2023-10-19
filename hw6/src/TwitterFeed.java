@@ -11,6 +11,7 @@ public class TwitterFeed {
     }
 
     //TODO: A getter for the feed that makes a deep copy of the ArrayList and each Tweet reference
+
     public ArrayList<Tweet> getTweets() {
         return Tweets;
     }
@@ -22,30 +23,31 @@ public class TwitterFeed {
         Tweets.add(tweet);
     }
 
-    //TODO: Both add the Tweet to the end of the feed.
-
 
     @Override
     public String toString() {
-        for (int i = 0; i < Tweets.size(); i++){
-            if (i == 0){
-                return screenName + "\n" + Tweets.get(i).toString();
-            }
-            else {
-                return Tweets.get(i).toString();
-            }
+        String feed = "";
+        feed += "Feed of @" + screenName + "\n";
+        for (Tweet tweet : Tweets) {
+            feed += tweet.toString() + "\n";
         }
-        return null;
+        return feed;
     }
 
-    public ArrayList<Tweet> tweetsBy(String screenName){
+    public String tweetsBy(String screenName2){
         ArrayList<Tweet> tweetsBy = new ArrayList<>(Tweets.size());
 
         for (int i = 0; i < Tweets.size(); i++){
-            if (Tweets.get(i).getScreenName().equals(screenName)){
+            if (Tweets.get(i).getScreenName().equals(screenName2)){
                 tweetsBy.add(Tweets.get(i));
             }
         }
-        return tweetsBy;
+
+        String tweets = "";
+        tweets += String.format("Tweets on %s feed by %s:\n", this.screenName, screenName2);
+        for (Tweet tweet : tweetsBy) {
+            tweets += tweet.toString() + "\n";
+        }
+        return tweets;
     }
 }

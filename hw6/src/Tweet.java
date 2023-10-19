@@ -5,7 +5,13 @@ public class Tweet {
 
     public Tweet(String screenName, String content){
         this.screenName = screenName;
-        this.content = content.substring(0,MAX_CHARS);
+        if (content.length() > MAX_CHARS){
+            this.content = content.substring(0,MAX_CHARS);
+        }
+        else {
+            this.content = content;
+        }
+
     }
 
     public Tweet(Tweet other){
