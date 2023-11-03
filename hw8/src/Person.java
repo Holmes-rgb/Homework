@@ -69,7 +69,7 @@ public class Person {
      */
     @Override
     public String toString() {
-        return String.format("%s, %s, %s", name, address, phone);
+        return String.format("%s, %s, %s\n", name, address, phone);
     }
 
     /**

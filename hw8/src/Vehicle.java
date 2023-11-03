@@ -122,7 +122,7 @@ public class Vehicle {
     @Override
     public String toString() {
         String sb = "";
-        sb += (String.format("%s,\n%s %s %d",this.getOwner().toString(), this.getMake(), this.getModel(), this.getYear()));
+        sb += (String.format("%s %s %s %d",this.getOwner().toString(), this.getMake(), this.getModel(), this.getYear()));
         if(this.getMileage() > 0){
             sb += (String.format(" %d miles",this.getMileage()));
         }
