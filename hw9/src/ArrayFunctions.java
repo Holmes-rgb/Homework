@@ -15,7 +15,7 @@ public class ArrayFunctions {
         int count = 0;
         try {
             Scanner scanner = new Scanner(new File(fileName));
-            for (int i = 0; i < array.length; i++){
+            for (int i = 0; i < array.length - 1; i++){
                 array[i] = scanner.nextLine();
                 count++;
             }
@@ -55,7 +55,7 @@ public class ArrayFunctions {
      * @param array array to be sorted
      */
     public static void selectionSort(String[] array){
-        int n = array.length;
+        int n = array.length -1;
 
         for (int i = 0; i < n - 1; i++) {
             int minIndex = i;
