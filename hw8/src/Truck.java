@@ -1,3 +1,9 @@
+/*
+Luke Holmes
+11/2/23
+Truck Object
+ */
+
 public class Truck extends Vehicle{
     public final static int DEF_CAPACITY = 1;
     public final static int DEF_AXLES = 2;

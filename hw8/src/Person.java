@@ -1,3 +1,8 @@
+/*
+Luke Holmes
+11/2/23
+Person Object
+ */
 public class Person {
     public String name;
     public String address;
@@ -69,7 +74,7 @@ public class Person {
      */
     @Override
     public String toString() {
-        return String.format("%s, %s, %s\n", name, address, phone);
+        return String.format("%s, %s, %s", name, address, phone);
     }
 
     /**

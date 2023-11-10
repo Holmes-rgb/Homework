@@ -1,3 +1,9 @@
+/*
+Luke Holmes
+11/2/23
+A short program to simulate a fleet of vehicles. Takes in a txt file and tells what the oldest vehicles are.
+ */
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -50,7 +56,7 @@ public class VehicleDriver {
 
         System.out.println("Vehicles to be sold:");
         for (int i = 0; i < sell.size(); i++){
-            System.out.printf("%s:  %d: %s\n", (sell.get(i).getClass().toString().toUpperCase()).substring(6), i+1, sell.get(i));
+            System.out.printf("%s:  %d: %s\n\n", (sell.get(i).getClass().toString().toUpperCase()).substring(6), i+1, sell.get(i));
         }
     }
 }
